@@ -1,0 +1,361 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unity 学习笔记 D01 | Yangyang-Poplar</title><meta name="keywords" content="笔记,学习,D01"><meta name="author" content="Yangyang-Poplar"><meta name="copyright" content="Yangyang-Poplar"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity 学习笔记 D01">
+<meta property="og:url" content="http://zhangyingfeng.xyz/2021/04/01/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0D01/index.html">
+<meta property="og:site_name" content="Yangyang-Poplar">
+<meta property="og:description" content="学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _img2.ctoutiao.com_uploads_2017_01_06_1483688389350306.jpg&refer=http _img2.ctoutiao.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg.jpg">
+<meta property="article:published_time" content="2021-04-01T06:25:19.000Z">
+<meta property="article:modified_time" content="2021-04-01T14:19:36.412Z">
+<meta property="article:author" content="Yangyang-Poplar">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="D01">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _img2.ctoutiao.com_uploads_2017_01_06_1483688389350306.jpg&refer=http _img2.ctoutiao.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg.jpg"><link rel="shortcut icon" href="/img/favicon.jpg"><link rel="canonical" href="http://zhangyingfeng.xyz/2021/04/01/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0D01/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="yandex-verification" content="{&quot;theme_color&quot;:{&quot;enable&quot;:true,&quot;main&quot;:&quot;#49B1F5&quot;,&quot;paginator&quot;:&quot;#00c4b6&quot;,&quot;button_hover&quot;:&quot;#FF7242&quot;,&quot;text_selection&quot;:&quot;#00c4b6&quot;,&quot;link_color&quot;:&quot;#99a9bf&quot;,&quot;meta_color&quot;:&quot;#858585&quot;,&quot;hr_color&quot;:&quot;#A4D8FA&quot;,&quot;code_foreground&quot;:&quot;#F47466&quot;,&quot;code_background&quot;:&quot;rgba(27, 31, 35, .05)&quot;,&quot;toc_color&quot;:&quot;#00c4b6&quot;,&quot;blockquote_padding_color&quot;:&quot;#49b1f5&quot;,&quot;blockquote_background_color&quot;:&quot;#49b1f5&quot;}}"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"已经过很久了","messageNext":"自上次更新日起，文章内容可能已过时。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Yangyang-Poplar","link":"链接: ","source":"来源: Yangyang-Poplar","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-01 22:19:36'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/img/sheel.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _uploadfile.qikuedu.com_2019_0328_20190328110423563.jpg&amp;refer=http _uploadfile.qikuedu.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yangyang-Poplar</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-envelope"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Unity 学习笔记 D01</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-01T06:25:19.000Z" title="发表于 2021-04-01 14:25:19">2021-04-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-01T14:19:36.412Z" title="更新于 2021-04-01 22:19:36">2021-04-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Unity/">Unity</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">764</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Unity 学习笔记 D01"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2021/04/01/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0D01/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/04/01/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0D01/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="unity3D-快捷键"><a href="#unity3D-快捷键" class="headerlink" title="unity3D 快捷键"></a>unity3D 快捷键</h2><h3 id="Scene-场景面板"><a href="#Scene-场景面板" class="headerlink" title="Scene 场景面板"></a>Scene 场景面板</h3><ul>
+<li>提供设计游戏界面的可视化面板</li>
+<li>常用快捷键<ol>
+<li>按下鼠标滚轮拖动场景，滑动滚轮缩放场景。</li>
+<li>鼠标右键旋转场景，点击”<img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20163114.png">“后，通过左键移动场景。</li>
+<li>点击右键同时按下W/S/A/D/Q/E键可实现场景漫游。</li>
+<li>在Scene面板选中物体后安F键，或在Hierarchy面板双击物体，可将物体设置为场景试图的中心。</li>
+<li>按住alt键同时通过鼠标左键围绕某种物体旋转场景，鼠标右键缩放场景。</li>
+</ol>
+</li>
+</ul>
+<h2 id="顶点吸附功能"><a href="#顶点吸附功能" class="headerlink" title="顶点吸附功能"></a>顶点吸附功能</h2><h3 id="变换工具"><a href="#变换工具" class="headerlink" title="变换工具"></a>变换工具</h3><ul>
+<li>移动场景Q<img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20163114.png"></li>
+<li>移动物体W<img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20202822.png"></li>
+<li>旋转物体E<img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20202916.png"></li>
+<li>缩放物体R<img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20202957.png"></li>
+<li>顶点吸附：选择物体后按住V键，定位定点，在拖拽到目标物体某个定点上。</li>
+</ul>
+<blockquote>
+<p>备注：先松V键</p>
+</blockquote>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><h3 id="练习：搭建车库"><a href="#练习：搭建车库" class="headerlink" title="练习：搭建车库"></a>练习：搭建车库</h3><blockquote>
+<p><strong>由4个Plane（平面），3个TrafficCone（交通圆锥体），1个humvee（悍马车）组成。</strong></p>
+</blockquote>
+<h2 id="变换切换"><a href="#变换切换" class="headerlink" title="变换切换"></a>变换切换</h2><h3 id="变换切换-1"><a href="#变换切换-1" class="headerlink" title="变换切换"></a>变换切换</h3><ul>
+<li><p>左边是改变游戏对象的轴心点</p>
+</li>
+<li><p>Center：设置轴心点在物体中心</p>
+</li>
+<li><p>Pivot：使用物体本身的轴心</p>
+</li>
+<li><p>右边是改变物体的坐标，Global：世界坐标；Local：自身坐标</p>
+</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20203851.png"></p>
+<h2 id="播放控件"><a href="#播放控件" class="headerlink" title="播放控件"></a>播放控件</h2><h3 id="播放控件-1"><a href="#播放控件-1" class="headerlink" title="播放控件"></a>播放控件</h3><ul>
+<li><p>从左到右依次是预览游戏、暂停游戏、逐帧播放</p>
+</li>
+<li><p>查看游戏最终运行后的画面。在运行模式下，任何更改都只是暂时的，在退出运行时会重置复位。</p>
+</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20204429.png"></p>
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><h3 id="视图-1"><a href="#视图-1" class="headerlink" title="视图"></a>视图</h3><ul>
+<li><p>ISO：正交观察模式</p>
+</li>
+<li><p>Persp：透视观察模式（近大远小）</p>
+</li>
+<li><p>视图角度：上下左右前后</p>
+<p>![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE">https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/屏幕截图</a> 2021-04-01 204713.png)</p>
+<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2></li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20204837.png"></p>
+<h2 id="坐标"><a href="#坐标" class="headerlink" title="坐标"></a>坐标</h2><h3 id="坐标-1"><a href="#坐标-1" class="headerlink" title="坐标"></a>坐标</h3><ul>
+<li><p>坐标：X红色、Y绿色、Z蓝色。</p>
+</li>
+<li><p>世界坐标：整个场景的固定坐标，不随物体旋转而改变。</p>
+</li>
+<li><p>本地坐标：物体自身坐标，随旋转而改变。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20205236.png"></p>
+</li>
+</ul>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><h3 id="场景Scene"><a href="#场景Scene" class="headerlink" title="场景Scene"></a>场景Scene</h3><ul>
+<li>一组相关联的游戏对象的集合，通常游戏中每个关卡就是一个场景，用于展现当前关卡中的所有物体。</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20210255.png"></p>
+<h2 id="游戏对象"><a href="#游戏对象" class="headerlink" title="游戏对象"></a>游戏对象</h2><h3 id="游戏对象GameObject"><a href="#游戏对象GameObject" class="headerlink" title="游戏对象GameObject"></a>游戏对象GameObject</h3><ul>
+<li><p>运行时出现在场景中的游戏物体。</p>
+</li>
+<li><p>例如：人物、地形、树木…..</p>
+</li>
+<li><p>是一种容器，可以挂载组件。</p>
+</li>
+<li><p>父、子物体</p>
+</li>
+<li><p>在Hierarchy面板中，将一个物体拖拽到另外一个物体中。</p>
+</li>
+<li><p>子物体将继承父物体的移动，旋转和缩放属性，但子物体不影响父物体。</p>
+</li>
+</ul>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="组件Component"><a href="#组件Component" class="headerlink" title="组件Component"></a>组件Component</h3><ul>
+<li>是游戏对象的功能模块。</li>
+<li>每个组件都是一个类的实例。</li>
+<li>Transform变换组件：决定物体位置、旋转、缩放比。</li>
+<li>Mesh Filter 网格过滤器：用于从资源中获取网格信息。</li>
+<li>Mesh Renderer 网格渲染器：从网格过滤器中获得几何形状，再根据变化组件定义的位置进行渲染。</li>
+<li>网格过滤器与网格渲染器联合使用，使模型显示到屏幕上。</li>
+</ul>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN@master/img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202021-04-01%20211620.png"></p>
+<h2 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h2><h3 id="练习：-创造子弹"><a href="#练习：-创造子弹" class="headerlink" title="练习： 创造子弹"></a>练习： 创造子弹</h3><blockquote>
+<p><strong>由2个Capsule（胶囊）1个Cylinder（圆柱体）组成。</strong></p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Yangyang-Poplar</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://zhangyingfeng.xyz/2021/04/01/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0D01/">http://zhangyingfeng.xyz/2021/04/01/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0D01/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://zhangyingfeng.xyz" target="_blank">Yangyang-Poplar</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/D01/">D01</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _img2.ctoutiao.com_uploads_2017_01_06_1483688389350306.jpg&amp;refer=http _img2.ctoutiao.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/03/31/%E4%B8%8D%E4%BA%89%EF%BC%8C%E8%87%AA%E6%9C%89%E5%A4%A9%E5%9C%B0/"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _pic1.win4000.com_wallpaper_0_59a4f8a1cd395.jpg&amp;refer=http _pic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">不争，自有天地</div></div></a></div><div class="next-post pull-right"><a href="/2021/04/02/Unity-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0D02/"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _img2.ctoutiao.com_uploads_2017_01_06_1483688389350306.jpg&amp;refer=http _img2.ctoutiao.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Unity 学习笔记D02</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/04/02/Unity-学习笔记D02/" title="Unity 学习笔记D02"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _img2.ctoutiao.com_uploads_2017_01_06_1483688389350306.jpg&refer=http _img2.ctoutiao.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-02</div><div class="title">Unity 学习笔记D02</div></div></a></div><div><a href="/2021/04/03/Unity-学习笔记D03/" title="Unity 学习笔记D03"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _img2.ctoutiao.com_uploads_2017_01_06_1483688389350306.jpg&refer=http _img2.ctoutiao.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-03</div><div class="title">Unity 学习笔记D03</div></div></a></div><div><a href="/2021/04/04/Unity-学习笔记D04/" title="Unity 学习笔记D04"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _img2.ctoutiao.com_uploads_2017_01_06_1483688389350306.jpg&refer=http _img2.ctoutiao.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-04</div><div class="title">Unity 学习笔记D04</div></div></a></div><div><a href="/2021/04/06/Unity-学习笔记D05/" title="Unity 学习笔记 D05"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _img2.ctoutiao.com_uploads_2017_01_06_1483688389350306.jpg&refer=http _img2.ctoutiao.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-06</div><div class="title">Unity 学习笔记 D05</div></div></a></div><div><a href="/2021/03/27/HEXO-GITHUB笔记/" title="HEXO+GITHUB笔记"><img class="cover" data-lazy-src="https://img14.360buyimg.com/ddimg/jfs/t1/166141/1/15210/53518/60608eb8Ebd90471a/d60a4db6019529c0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-27</div><div class="title">HEXO+GITHUB笔记</div></div></a></div><div><a href="/2021/03/30/hexo-swiper-文章置顶插件/" title="Hexo-Swiper 文章置顶插件"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _images3.10qianwan.com_10qianwan_20180717_b_0_201807171419326349.jpg&refer=http _images3.10qianwan.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-30</div><div class="title">Hexo-Swiper 文章置顶插件</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Twikoo</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#unity3D-%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.</span> <span class="toc-text">unity3D 快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Scene-%E5%9C%BA%E6%99%AF%E9%9D%A2%E6%9D%BF"><span class="toc-number">1.1.</span> <span class="toc-text">Scene 场景面板</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B6%E7%82%B9%E5%90%B8%E9%99%84%E5%8A%9F%E8%83%BD"><span class="toc-number">2.</span> <span class="toc-text">顶点吸附功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E6%8D%A2%E5%B7%A5%E5%85%B7"><span class="toc-number">2.1.</span> <span class="toc-text">变换工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0"><span class="toc-number">3.</span> <span class="toc-text">练习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%9A%E6%90%AD%E5%BB%BA%E8%BD%A6%E5%BA%93"><span class="toc-number">3.1.</span> <span class="toc-text">练习：搭建车库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E6%8D%A2%E5%88%87%E6%8D%A2"><span class="toc-number">4.</span> <span class="toc-text">变换切换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E6%8D%A2%E5%88%87%E6%8D%A2-1"><span class="toc-number">4.1.</span> <span class="toc-text">变换切换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%92%AD%E6%94%BE%E6%8E%A7%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">播放控件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%92%AD%E6%94%BE%E6%8E%A7%E4%BB%B6-1"><span class="toc-number">5.1.</span> <span class="toc-text">播放控件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE"><span class="toc-number">6.</span> <span class="toc-text">视图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE-1"><span class="toc-number">6.1.</span> <span class="toc-text">视图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-number">7.</span> <span class="toc-text">基础概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%90%E6%A0%87"><span class="toc-number">8.</span> <span class="toc-text">坐标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%90%E6%A0%87-1"><span class="toc-number">8.1.</span> <span class="toc-text">坐标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF"><span class="toc-number">9.</span> <span class="toc-text">场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AFScene"><span class="toc-number">9.1.</span> <span class="toc-text">场景Scene</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E5%AF%B9%E8%B1%A1"><span class="toc-number">10.</span> <span class="toc-text">游戏对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E5%AF%B9%E8%B1%A1GameObject"><span class="toc-number">10.1.</span> <span class="toc-text">游戏对象GameObject</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6"><span class="toc-number">11.</span> <span class="toc-text">组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6Component"><span class="toc-number">11.1.</span> <span class="toc-text">组件Component</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">12.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0-1"><span class="toc-number">13.</span> <span class="toc-text">练习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%9A-%E5%88%9B%E9%80%A0%E5%AD%90%E5%BC%B9"><span class="toc-number">13.1.</span> <span class="toc-text">练习： 创造子弹</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _uploadfile.qikuedu.com_2019_0328_20190328110423563.jpg&amp;refer=http _uploadfile.qikuedu.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 By Yangyang-Poplar</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'Df1B3KK3usoqbOLmLQs0FibW-gzGzoHsz',
+      appKey: 'UDwYCqFC828PbvutMAOuU0jd',
+      placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: 'https://df1b3kk3.lc-cn-n1-shared.com',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'twikoo-0g0zol2vac5243bc',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'twikoo-0g0zol2vac5243bc',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Valine' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/untitled.png" alt="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/untitled.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-27</span><a class="blog-slider__title" href="2021/03/27/HEXO-GITHUB笔记/">HEXO+GITHUB笔记</a><div class="blog-slider__text">教程：HEXO+GitHub搭建</div><a class="blog-slider__button" href="2021/03/27/HEXO-GITHUB笔记/">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _pic.6186.cn_d_file_titlepic_20191127_xb2eawnma53.jpg&refer=http _pic.6186.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg.jpg" alt="https://cdn.jsdelivr.net/gh/yanghost/PicGoCDN/img/src=http _pic.6186.cn_d_file_titlepic_20191127_xb2eawnma53.jpg&refer=http _pic.6186.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg.jpg"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-30</span><a class="blog-slider__title" href="2021/03/30/hexo-swiper-文章置顶插件/">Hexo-Swiper 文章置顶插件</a><div class="blog-slider__text">简单好用的 hexo 博客文章置顶插件！</div><a class="blog-slider__button" href="2021/03/30/hexo-swiper-文章置顶插件/">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><!-- hexo injector body_end end --></body></html>
